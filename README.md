@@ -6,6 +6,8 @@ Safety 4.0 Bootcamp (INSPECCO × Kriptarium) kapsamında, SAMİB üyesi Standart
 | --- | --- |
 | [analiz.md](analiz.md) | Yönetici özeti, firma ve makine, SWOT, TOWS stratejileri, Lab 1–7 taslak cevapları, firmaya sorulacaklar, kaynaklar |
 | [makine-secimi.md](makine-secimi.md) | SAMİB ve AİMSAD üyeleri arasından makinenin nasıl seçildiği |
+| [lab-foyleri/lab_foyleri_yangin_pompasi.pdf](lab-foyleri/lab_foyleri_yangin_pompasi.pdf) | 7 laboratuvar föyü, bootcamp föy formatında doldurulmuş ("Standart Pompa Yangın Pompa Seti Sürümü") |
+| [lab-foyleri/lab_foyleri_yangin_pompasi.html](lab-foyleri/lab_foyleri_yangin_pompasi.html) | Föylerin düzenlenebilir kaynağı; Chrome ile tekrar PDF'e basılabilir |
 
 Canlı doküman: https://claude.ai/artifact/RFDbeNs1YNvMKbyyP3U12U
 

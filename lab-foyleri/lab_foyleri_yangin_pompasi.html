@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Laboratuvar Föyleri — Standart Pompa Yangın Pompa Seti Sürümü</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm 18mm 15mm; }
+  :root { --teal: #1a8f86; --navy: #1c2a44; --red: #b42318; --amber: #d98a00; --ink: #222; --quiet: #667085; --ans: #0b4f8a; --line: #222; --tint: #eef7f6; }
+  * { box-sizing: border-box; }
+  body { font-family: "Lato", "Segoe UI", Arial, sans-serif; color: var(--ink); font-size: 9.4pt; line-height: 1.34; margin: 0; background: #fff; }
+  .page { page-break-after: always; position: relative; }
+  .page:last-child { page-break-after: auto; }
+  .brand { color: var(--teal); font-weight: 700; letter-spacing: .32em; font-size: 9pt; }
+  .labline { color: var(--teal); font-weight: 700; letter-spacing: .28em; font-size: 8.4pt; text-transform: uppercase; margin-top: 2mm; }
+  h1 { font-family: Georgia, "Times New Roman", serif; color: var(--navy); font-size: 22pt; margin: 6mm 0 3mm; }
+  h2 { font-family: Georgia, "Times New Roman", serif; color: var(--navy); font-size: 17pt; margin: 1mm 0 0; }
+  h3 { font-family: Georgia, "Times New Roman", serif; color: var(--navy); font-size: 12pt; margin: 4mm 0 1.5mm; }
+  .output { color: var(--teal); font-size: 9.5pt; font-weight: 600; }
+  .titlerow { display: flex; justify-content: space-between; align-items: baseline; gap: 6mm; }
+  .meta { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4mm; margin: 3mm 0 3mm; font-size: 8.8pt; color: var(--quiet); font-weight: 700; }
+  .meta div { border-bottom: 1px solid #98a2b3; padding-bottom: 1mm; }
+  .meta span { color: var(--ans); font-weight: 600; font-family: "Segoe Print", "Comic Sans MS", cursive; font-size: 9.6pt; margin-left: 2mm; }
+  .concept { background: var(--tint); border-left: 3px solid var(--teal); padding: 2mm 3.5mm; margin: 2mm 0 3mm; font-size: 9.6pt; }
+  .concept b { color: var(--teal); }
+  .context { border: 1px dashed #98a2b3; padding: 2mm 3.5mm; margin: 2mm 0 3mm; font-size: 9.5pt; }
+  .context b { color: var(--navy); }
+  .q { margin: 2.2mm 0 0; font-weight: 700; color: var(--navy); }
+  .q .n { display: inline-block; width: 6mm; color: var(--teal); }
+  .a { margin: .8mm 0 0 6mm; color: var(--ans); border-left: 2px solid #c7d7e8; padding-left: 2.5mm; }
+  table { border-collapse: collapse; width: 100%; margin: 2mm 0; font-size: 9.2pt; }
+  th, td { border: 1px solid var(--line); padding: 1.4mm 2mm; vertical-align: top; text-align: left; }
+  th { background: #f2f4f7; color: var(--navy); }
+  td.ans { color: var(--ans); }
+  td.c { text-align: center; color: var(--ans); font-weight: 700; }
+  .legend { font-size: 8.6pt; color: var(--quiet); margin-top: 1mm; }
+  .legend b { color: var(--navy); }
+  .rule { font-style: italic; color: var(--red); font-size: 9.2pt; margin-top: 2.5mm; }
+  .ep { margin-top: 3mm; font-size: 9.2pt; }
+  .ep b { color: var(--teal); }
+  .note { font-style: italic; color: var(--quiet); font-size: 8.8pt; margin-top: 2mm; }
+  .footer { margin-top: 4mm; text-align: center; font-size: 7.6pt; color: var(--quiet); border-top: 1px solid #e4e7ec; padding-top: 1.5mm; }
+  .paths { border: 1px solid #d0d5dd; padding: 2.5mm 3mm; margin: 2mm 0 3mm; font-size: 9pt; }
+  .pathlabel { font-size: 8pt; font-weight: 800; letter-spacing: .06em; margin: 1mm 0; }
+  .pathlabel.norm { color: var(--navy); } .pathlabel.safe { color: var(--red); }
+  .chain { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5mm; margin-bottom: 2mm; }
+  .box { border: 1.2px solid var(--navy); border-radius: 2mm; padding: 1mm 2mm; font-weight: 700; background: #fff; }
+  .box.safe { border-color: var(--red); }
+  .box.x { border-color: var(--amber); background: #fff6e0; }
+  .arrow { color: var(--quiet); font-size: 8pt; }
+  .tag { background: var(--amber); color: #fff; font-size: 7.6pt; font-weight: 800; padding: .4mm 1.5mm; border-radius: 1mm; }
+  .zones { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2mm; margin: 2mm 0; }
+  .zone { border: 1.5px solid var(--navy); border-radius: 2mm; padding: 1.5mm; font-size: 8.4pt; min-height: 22mm; }
+  .zone .zn { font-weight: 800; color: var(--navy); font-size: 8.8pt; margin-bottom: .8mm; }
+  .zone.z1 { border-color: var(--red); background: #fdf0ef; } .zone.z1 .zn { color: var(--red); }
+  .conduits { font-size: 8.6pt; color: var(--ans); }
+  .twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+  .panel { border: 1px solid #d0d5dd; padding: 2mm 3mm; font-size: 9pt; }
+  .panel .ph { font-family: Georgia, serif; font-weight: 700; margin-bottom: 1mm; }
+  .panel.cur .ph { color: var(--red); } .panel.tgt .ph { color: var(--teal); }
+  .panel ol, .panel ul { margin: 1mm 0 0 4mm; padding: 0; color: var(--ans); }
+  .vuln td:first-child { width: 28%; font-weight: 700; }
+  .cover-list { font-size: 9.6pt; margin: 3mm 0; }
+  .cover-list div { padding: 1mm 0; border-bottom: 1px solid #eaecf0; }
+  .cover-list b { color: var(--navy); } .cover-list span { color: var(--teal); }
+  .disclaimer { font-size: 8.4pt; color: var(--quiet); margin-top: 6mm; }
+</style>
+</head>
+<body>
+
+<!-- KAPAK -->
+<section class="page">
+  <div class="brand">INSPECCO × KRIPTARIUM</div>
+  <div class="labline" style="margin-top:4mm">Safety 4.0 Bootcamp</div>
+  <h1>Laboratuvar Föyleri — Standart Pompa Yangın Pompa Seti Sürümü</h1>
+  <p>Tüm laboratuvarlar, SAMİB üyesi Standart Pompa'nın NFPA 20'ye uygun yangın pompa setine uyarlanmıştır: elektrikli ana pompa + dizel yedek pompa + jokey pompası · her pompaya ayrı kilitli kumanda panosu · bina otomasyonuna kuru kontak çıkışları · planlanan <b>S Plus Connect</b> uzaktan izleme kutusu (4G / bulut).</p>
+  <div class="context"><b>Bu makineyi farklı kılan:</b> Şişeleme hattında ve PaketPro'da güvenli durum "makine durur"dur. Yangın pompasında güvenli durum <b>"pompa çalışır ve basınç sağlanır"</b>dır. Saldırganın hedefi bu yüzden makineyi çalıştırmak değil, yangın anında <b>susturmaktır</b>.</div>
+  <div class="cover-list">
+    <div><b>LAB 1 · Safety Architecture</b> — <span>Çıktı: Safety Function Map</span></div>
+    <div><b>LAB 2 · IEC 62443 Mini Workshop</b> — <span>Çıktı: Zone / Conduit Diagram</span></div>
+    <div><b>LAB 3 · Threat &amp; Risk + Risk Matrix</b> — <span>Çıktı: Risk Register</span></div>
+    <div><b>LAB 4 · Secure Remote Access</b> — <span>Çıktı: Secure Architecture</span></div>
+    <div><b>LAB 5 · SBOM / CVE / Patch</b> — <span>Çıktı: Vulnerability Decision</span></div>
+    <div><b>LAB 6 · CRA Incident Simulation</b> — <span>Çıktı: Incident Workflow</span></div>
+    <div><b>LAB 7 · AI Safety Challenge</b> — <span>Çıktı: AI Fail-Safe Decision</span></div>
+  </div>
+  <p class="note">Makine bilgileri Standart Pompa genel ürün kataloğundan (Rev.12, Ekim 2023) alınmıştır. Pano içinde PLC / elektronik kontrol kartı bulunup bulunmadığı ve S Plus Connect kutusu, firmadan doğrulanması gereken varsayımlardır.</p>
+  <p class="disclaimer">Bu föyler bir eğitim çıktısıdır; resmî denetim, uygunluk değerlendirmesi veya belgelendirme değildir ve CE/mevzuat uygunluğu garantisi vermez. Doldurduğunuz föyler gün sonunda Machine Starter Pack'inizi oluşturur ve Safety 4.0 Workspace'te yaşamaya devam eder.</p>
+  <div class="footer">SAFETY 4.0 BOOTCAMP · Standart Pompa Yangın Pompa Seti Sürümü · Bu bir eğitim çıktısıdır, resmî denetim değildir.</div>
+</section>
+
+<!-- LAB 1 -->
+<section class="page">
+  <div class="labline">Laboratuvar 1 · Standart Pompa · Yangın Pompa Seti</div>
+  <div class="titlerow"><h2>Safety Architecture</h2><div class="output">Çıktı: Safety Function Map</div></div>
+  <div class="meta"><div>Ad Soyad<span>Nisa Güven</span></div><div>Grup<span></span></div><div>Tarih<span>02.11.2026</span></div></div>
+  <div class="context"><b>Yangın pompası bağlamı:</b> Sprinkler hattında basınç düşünce basınç anahtarı kilitli kumanda panosuna sinyal verir; pano önce jokey, sonra ana elektrikli pompayı, gerekirse dizel yedek pompayı başlatır. Panonun kuru kontakları bina otomasyonuna gider ve planlanan S Plus Connect kutusu bu kontakları okuyup 4G ile buluta taşıyacak — sorular oraya gidecek.</div>
+  <div class="concept"><b>Kavram:</b> Emniyet fonksiyonu, insanı koruyan fonksiyondur ve ayrı bir safety yolunda yaşar. Gerekli güvenilirliği (PLr/SIL) riskle orantılıdır — ve bu güvenilirlik, dijital bir konfigürasyona bağlıdır.</div>
+  <div class="paths">
+    <div class="pathlabel norm">NORMAL KONTROL YOLU · izleme / raporlama</div>
+    <div class="chain"><span class="box">Pano kuru kontakları</span><span class="arrow">okuma →</span><span class="box x">S Plus Connect kutusu</span><span class="tag">dijital kesişim noktası</span><span class="arrow">4G / TLS →</span><span class="box">Bulut + mobil uygulama</span><span class="arrow">↔</span><span class="box">Bina otomasyonu (BMS)</span></div>
+    <div class="pathlabel safe">SAFETY YOLU · koruma · AYRI</div>
+    <div class="chain"><span class="box safe">Basınç anahtarları (≥2, kilitli)</span><span class="arrow">→</span><span class="box safe">Kilitli kumanda panosu (röle + zamanlayıcı)</span><span class="arrow">→</span><span class="box safe">Kontaktör / dizel start ünitesi</span><span class="arrow">→</span><span class="box safe">Safe State: pompa ÇALIŞIR</span></div>
+  </div>
+  <h3>Görev — sırayla cevaplayın</h3>
+  <p class="q"><span class="n">1</span>Bu makinede tehlike nedir? İnsan neyden zarar görür?</p>
+  <p class="a">Asıl tehlike yangındır: pompa basınç sağlayamazsa sprinkler, yangın dolabı ve hidrantlara su gitmez; binadakiler alev, ısı ve duman zehirlenmesiyle zarar görür, itfaiye müdahalesi de zayıflar. Pompa odasında ikincil tehlikeler: dönen kaplin/mil, elektrik çarpması, dizel egzozu ve sıcak yüzeyler.</p>
+  <p class="q"><span class="n">2</span>Safety function (emniyet fonksiyonu) hangisidir?</p>
+  <p class="a">"Sistem basıncı ayar değerinin altına düştüğünde ana pompayı otomatik başlat; basınç yine sağlanamazsa dizel yedek pompayı başlat ve basınç normale dönse bile minimum çalışma süresi (elektrikli ≥10 dk, dizel ≥30 dk) dolmadan durdurma."</p>
+  <p class="q"><span class="n">3</span>Safety-related control system nerede? Şemada işaretleyin.</p>
+  <p class="a">Şemadaki kırmızı (alt) yol: basınç anahtarları → her pompanın ayrı, kilitli kumanda panosu (koruma rölesi, zamanlayıcılar) → kontaktör / dizel start ünitesi. Jokey panosu da bu yola dahildir. İzleme kutusu ve BMS bu yolun DIŞINDADIR.</p>
+  <p class="q"><span class="n">4</span>Normal PLC ile Safety PLC farkı nedir?</p>
+  <p class="a">Bu makinede ayrı bir "Safety PLC" yerine emniyet yolunu kilitli pano ve basınç anahtarları taşır; normal yol ise izleme ve raporlamadır. Fark: normal yol veri üretir/okur, hata yapabilir ve makine yine güvendedir; emniyet yolu ise kendi kendine, ağdan bağımsız çalışmak, kilitlenebilir ayarlara sahip olmak ve arızada bile pompayı çalıştırabilmek (elle elektriksel / elle mekanik yol verme) zorundadır.</p>
+  <p class="q"><span class="n">5</span>PLr / SIL neden var? Bu fonksiyon için neden önemli?</p>
+  <p class="a">Koruma riskle orantılı olmalı. Burada şiddet en üst düzeydir (çok sayıda can kaybı), maruz kalma süreklidir (bina her an dolu olabilir) ve yangında kaçınabilirlik düşüktür. Bu yüzden yüksek güvenilirlik gerekir; yönetmelik ve NFPA 20 bunu yedek pompa, çift basınç anahtarı, bağımsız enerji ve kilitli pano şartlarıyla somutlaştırır. Bu güvenilirlik pano ayarlarına (basınç set değerleri, zamanlayıcılar) bağlıdır — ayar değişirse koruma düşer. (Bugün hesap yapılmadı.)</p>
+  <p class="q"><span class="n">6</span>Safe state (güvenli durum) nedir?</p>
+  <p class="a">"Pompa çalışır ve sistem basıncı korunur." Klasik makinelerin tersine, güvenli durum enerjiyi kesmek değil, vermektir. Bu yüzden ana pompa durursa dizel devreye girer; otomatik başlayan pompa basınç normale dönse bile hemen durmaz.</p>
+  <p class="q"><span class="n">7</span>Safety function hangi dijital bağımlılıklara sahip?</p>
+  <p class="a">Basınç set değerleri (PJSET / P1SET / P2SET), haftalık otomatik test zamanlayıcısı ve selenoid vanası, minimum çalışma zamanlayıcısı, dizel kontrol ünitesi (start denemeleri, akü/şarj), pano otomatik/el seçici durumu, bina otomasyonu bağlantısı ve eklenecek S Plus Connect kutusu ile servis bilgisayarı.</p>
+  <p class="q"><span class="n">8</span>Siber müdahale hangi noktadan bu fonksiyonu bozar?</p>
+  <p class="a">(a) İzleme kutusu ya da BMS panoya yazabiliyorsa: otomatik mod kapatılır veya pompa durdurulur. (b) Set değerleri ve zamanlayıcılar elektronikse ve servis bilgisayarı/USB ile değiştirilebiliyorsa: basınç eşiği düşürülür, haftalık test kapatılır. (c) İzleme verisi sahtelenirse: gerçek arıza "normal" görünür ve yangına kadar fark edilmez.</p>
+  <p class="ep">Bu föyün çıktısı <b>Safety Function Map</b> → Evidence Pack <b>EP 03 Safety Functions</b> başlığına oturur.</p>
+  <div class="footer">SAFETY 4.0 BOOTCAMP · Standart Pompa Yangın Pompa Seti Sürümü · Bu bir eğitim çıktısıdır, resmî denetim değildir.</div>
+</section>
+
+<!-- LAB 2 -->
+<section class="page">
+  <div class="labline">Laboratuvar 2 · Standart Pompa · Yangın Pompa Seti</div>
+  <div class="titlerow"><h2>IEC 62443 Mini Workshop</h2><div class="output">Çıktı: Zone / Conduit Diagram</div></div>
+  <div class="meta"><div>Ad Soyad<span>Nisa Güven</span></div><div>Grup<span></span></div><div>Tarih<span>02.11.2026</span></div></div>
+  <div class="concept"><b>Kavram:</b> Zone = benzer kritiklikteki cihazları bir bölgeye topla. Conduit = bölgeler arası her geçişe kontrollü bir kapı. 62443'ün maddesini ezberlemiyoruz — mantığını uyguluyoruz.</div>
+  <h3>Görev A — varlıkları bölgelere ayırın</h3>
+  <div class="context"><b>Varlık listesi:</b> Basınç anahtarları · elektrik pompa kumanda panosu · dizel pompa kumanda panosu + dizel kontrol ünitesi · jokey pompa panosu · haftalık test zamanlayıcısı / selenoid vana · S Plus Connect kutusu (4G modem) · bina otomasyon sistemi (BMS) · yangın alarm paneli · S Plus bulut platformu · mobil uygulama · servis teknisyeni dizüstüsü · bayi/servis hesapları</div>
+  <p class="q"><span class="n">1</span>Hangi varlıklar aynı bölgede? Bölgeleri adlandırıp gruplandırın.</p>
+  <div class="zones">
+    <div class="zone z1"><div class="zn">Z1 · Emniyet</div>Basınç anahtarları, 3 kumanda panosu, dizel kontrol ünitesi, test zamanlayıcısı / selenoid</div>
+    <div class="zone"><div class="zn">Z2 · İzleme</div>S Plus Connect kutusu, 4G modem</div>
+    <div class="zone"><div class="zn">Z3 · Bina</div>BMS, yangın alarm paneli</div>
+    <div class="zone"><div class="zn">Z4 · Bulut</div>S Plus platformu, mobil uygulama, bildirim servisi</div>
+    <div class="zone"><div class="zn">Z5 · Servis</div>Teknisyen dizüstüsü, bayi/servis hesapları, uzak destek</div>
+  </div>
+  <p class="a">Kritiklik sırası Z1 &gt; Z2 &gt; Z3 &gt; Z5 &gt; Z4. Bölge içi güvenilir kabul edilir; bu yüzden internete dokunan hiçbir şey Z1'e konmaz.</p>
+  <p class="q"><span class="n">2</span>Kumanda panolarını (bu makinenin "Safety PLC"si) hangi bölgeye koydunuz — neden?</p>
+  <p class="a">Z1 Emniyet bölgesine, tek başlarına. Hayatı koruyan fonksiyon burada yaşıyor; ağ bağlantısı yok, ayarlar kilitli ve fiziksel erişim anahtarla. İzleme kutusu bile aynı panonun yanında dursa da ayrı bölgededir (Z2), çünkü internete konuşur.</p>
+  <p class="q"><span class="n">3</span>Bölgeler arası geçişler (conduit) nerede? Her geçişte ne kontrol edilecek?</p>
+  <table>
+    <tr><th>Conduit</th><th>Ne geçer, hangi yönde</th><th>Kontrol</th></tr>
+    <tr><td>C1 · Z1 → Z2</td><td class="ans">Kuru kontak durumları (alarm, pompa çalışıyor, test başladı, otomatik mod) — sadece Z1'den Z2'ye</td><td class="ans">Tek yönlü, galvanik izoleli giriş; Z2'den Z1'e hiçbir çıkış/röle kablolanmaz (yazma yolu fiziksel olarak yok)</td></tr>
+    <tr><td>C2 · Z1 → Z3</td><td class="ans">Aynı kuru kontaklar, BMS'e bilgi amaçlı</td><td class="ans">Tek yönlü; katalog gereği BMS'ten pompa çalıştırma/durdurma yok</td></tr>
+    <tr><td>C3 · Z2 → Z4</td><td class="ans">Telemetri ve olay kayıtları</td><td class="ans">Sadece dışarı giden TLS bağlantısı, cihaz sertifikası, sabit hedef adres; gelen bağlantı kapalı</td></tr>
+    <tr><td>C4 · Z5 → Z2 / Z4</td><td class="ans">Servis erişimi, yazılım güncellemesi</td><td class="ans">Jump server + VPN + MFA + kişisel hesap + oturum kaydı; sadece imzalı güncelleme</td></tr>
+    <tr><td>C5 · Z5 → Z1</td><td class="ans">Ayar değişikliği, bakım</td><td class="ans">Sadece fiziksel: pano anahtarı, iş emri, değişiklik kaydı, sonrasında elle test</td></tr>
+  </table>
+  <h3>Görev B — uzak erişim kararı (6 satır)</h3>
+  <table>
+    <tr><th style="width:16%">Karar</th><th style="width:26%">Seçenekler</th><th>Seçiminiz + nedeni</th></tr>
+    <tr><td><b>Aracı?</b></td><td>Doğrudan / Jump server</td><td class="ans"><b>Jump server.</b> Kutu internetten doğrudan erişilebilir olmaz; tüm servis erişimi tek, izlenen bir noktadan geçer.</td></tr>
+    <tr><td><b>Tünel?</b></td><td>Açık / VPN</td><td class="ans"><b>VPN.</b> Trafik şifreli; 4G modem üzerinde açık port bırakılmaz.</td></tr>
+    <tr><td><b>Kimlik?</b></td><td>Parola / MFA</td><td class="ans"><b>MFA.</b> 114 servis noktasında çok teknisyen var; tek bir sızan parola yetmemeli.</td></tr>
+    <tr><td><b>Hesap?</b></td><td>Paylaşılan / Kişisel</td><td class="ans"><b>Kişisel.</b> Her teknisyen ve bayi kendi hesabıyla; kim neyi yaptı izlenebilir, ayrılan kişinin hesabı kapatılır.</td></tr>
+    <tr><td><b>Kayıt?</b></td><td>Yok / Tam oturum kaydı</td><td class="ans"><b>Tam oturum kaydı.</b> Olayda kanıt (CRA) ve bina sahibi/sigorta için iz.</td></tr>
+    <tr><td><b>Zamanlama?</b></td><td>Sürekli açık / Varsayılan kapalı</td><td class="ans"><b>Varsayılan kapalı.</b> Servis talebi açılınca süre sınırlı açılır; telemetri (C3) bundan bağımsız çalışır.</td></tr>
+  </table>
+  <p class="ep">Bu föyün çıktısı <b>Zone / Conduit Diagram</b> → Evidence Pack <b>EP 05 Zone &amp; Conduit</b> başlığına oturur.</p>
+  <div class="footer">SAFETY 4.0 BOOTCAMP · Standart Pompa Yangın Pompa Seti Sürümü · Bu bir eğitim çıktısıdır, resmî denetim değildir.</div>
+</section>
+
+<!-- LAB 3 -->
+<section class="page">
+  <div class="labline">Laboratuvar 3 · Standart Pompa · Yangın Pompa Seti</div>
+  <div class="titlerow"><h2>Threat &amp; Risk + Risk Matrix</h2><div class="output">Çıktı: Risk Register</div></div>
+  <div class="meta"><div>Ad Soyad<span>Nisa Güven</span></div><div>Grup<span></span></div><div>Tarih<span>02.11.2026</span></div></div>
+  <div class="concept"><b>Kavram:</b> Senaryo beş parçadır: kim → hangi kapı → ne yapar → zincir → FİZİKSEL sonuç. Skor = L × S × E (her biri 1–3). Kural: S=3 ise skor düşük olsa bile senaryo öne alınır — insana zarar görünür kalır.</div>
+  <div class="context"><b>Yangın pompasının kapıları (ipucu):</b> S Plus Connect 4G modemi · bulut/mobil uygulama hesapları · servis dizüstüsü ve USB · kilitli ama anahtarı paylaşılan pano · BMS bağlantısı · kutu yazılım güncellemesi — fiziksel sonuç adayları: yangında pompanın kalkmaması, yetersiz basınç, arızanın yangına kadar gizli kalması.</div>
+  <h3>Görev — üç senaryo kurun ve puanlayın</h3>
+  <table>
+    <tr><th style="width:52%">Senaryo (kim → kapı → zincir → fiziksel sonuç)</th><th>L</th><th>S</th><th>E</th><th>Skor</th><th>Öncelik</th></tr>
+    <tr><td class="ans"><b>Fırsatçı dış:</b> İnternette açık port tarayan bot → varsayılan parolası değiştirilmemiş S Plus Connect modemi → kutu panoya yazabilecek şekilde kablolanmışsa otomatik mod kapatılır / pompa "dur" komutu alır → yangında pompa kalkmaz, sprinkler basınçsız kalır → can kaybı</td><td class="c">2</td><td class="c">3</td><td class="c">3</td><td class="c">18</td><td class="c">Kritik</td></tr>
+    <tr><td class="ans"><b>Tedarik zinciri:</b> Kutu yazılım tedarikçisi ele geçirilir → imzasız güncelleme tüm filoya yüklenir → kutular sürekli "normal" gönderir, gerçek akü/start arızası gizlenir → bakım yapılmaz, yangında dizel pompa çalışmaz → can kaybı</td><td class="c">1</td><td class="c">3</td><td class="c">2</td><td class="c">6</td><td class="c">Orta → S=3, öne alınır</td></tr>
+    <tr><td class="ans"><b>Meraklı içeriden:</b> Sık çalışan jokey pompadan rahatsız olan bina görevlisi → paylaşılan pano anahtarı / servis dizüstüsü → basınç set değeri düşürülür veya haftalık test kapatılır → arıza fark edilmez, yangında ana pompa geç ya da yetersiz basınçla devreye girer → yangın büyür</td><td class="c">2</td><td class="c">3</td><td class="c">1</td><td class="c">6</td><td class="c">Orta → S=3, öne alınır</td></tr>
+  </table>
+  <div class="legend"><b>Kritik</b> 18–27 · <b>Yüksek</b> 9–17 · <b>Orta</b> 4–8 · <b>Düşük</b> 1–3 · Puanlar örnek tahmindir.</div>
+  <p class="q"><span class="n">1</span>En yüksek öncelikli senaryonuz hangisi? Bir cümleyle: neden bu?</p>
+  <p class="a">1. senaryo (skor 18): internete açık tek bir kapı, hiçbir hedefli çaba gerektirmeden doğrudan hayat kurtaran fonksiyona dokunabiliyor — çözümü de tasarımda: izleme kutusunun panoya yazma yolu fiziksel olarak olmamalı.</p>
+  <p class="q"><span class="n">2</span>S=3 olup skoru düşük kalan senaryonuz var mı? Nasıl görünür kılacaksınız?</p>
+  <p class="a">Evet, 2. ve 3. senaryolar (skor 6). Risk Register'da S=3 bayrağıyla en üste taşınır ve her birine sahip atanır: 2. için imzalı güncelleme + "veri gelmezse/şüpheliyse alarm" kuralı (sessizlik de alarmdır); 3. için set değeri değişikliğinin buluta olay olarak düşmesi, kişisel pano anahtarı ve haftalık testin yapılmadığının otomatik raporlanması.</p>
+  <p class="rule">Altın kural: Zincir "veri çalındı" ile bitiyorsa emniyet bulgusu değildir — bir adım daha gidin: bu, binadaki insana ne yapar?</p>
+  <p class="ep">Bu föyün çıktısı <b>Risk Register</b> → Evidence Pack <b>EP 04 Risk Assessment</b> başlığına oturur.</p>
+  <div class="footer">SAFETY 4.0 BOOTCAMP · Standart Pompa Yangın Pompa Seti Sürümü · Bu bir eğitim çıktısıdır, resmî denetim değildir.</div>
+</section>
+
+<!-- LAB 4 -->
+<section class="page">
+  <div class="labline">Laboratuvar 4 · Standart Pompa · Yangın Pompa Seti</div>
+  <div class="titlerow"><h2>Secure Remote Access</h2><div class="output">Çıktı: Secure Architecture</div></div>
+  <div class="meta"><div>Ad Soyad<span>Nisa Güven</span></div><div>Grup<span></span></div><div>Tarih<span>02.11.2026</span></div></div>
+  <div class="concept"><b>Kavram:</b> İki katman, ikisi de şart: erişim güvenliği (girişi zorlaştır: ara nokta, VPN, MFA, kişisel hesap, kayıt, varsayılan kapalı) + emniyet bağımsızlığı (girse bile insan korunur).</div>
+  <h3>Görev A — mevcut → hedef</h3>
+  <div class="twocol">
+    <div class="panel cur"><div class="ph">MEVCUT (ve kaçınılacak "kolay" tasarım)</div>
+      <ul>
+        <li>Bugün: uzaktan erişim yok; arıza telefonla (444 1 477) bildiriliyor, bakım yılda 3–4 ziyaret.</li>
+        <li>Kolay ama yanlış bağlantı: 4G modem internete açık port → teknisyenlerin ortak şifresi → kayıt yok → kutu panoya röle çıkışıyla bağlı ("uzaktan reset" özelliği).</li>
+        <li>Sonuç: tek sızan şifre, filodaki tüm yangın pompalarına uzaktan dokunabilir.</li>
+      </ul>
+    </div>
+    <div class="panel tgt"><div class="ph">HEDEF (beş ilkeyle yeniden tasarlayın)</div>
+      <ol>
+        <li><b>Ara nokta:</b> Kutu sadece dışarı bağlanır; servis erişimi jump server üzerinden.</li>
+        <li><b>Kişisel hesap:</b> Her teknisyen/bayi kendi hesabıyla; ortak şifre yok.</li>
+        <li><b>MFA:</b> Bulut ve jump server girişinde ikinci faktör.</li>
+        <li><b>Varsayılan kapalı:</b> Servis erişimi iş emriyle, süre sınırlı açılır.</li>
+        <li><b>Oturum kaydı:</b> Kim, ne zaman, hangi kutuda ne yaptı — kayıt altında.</li>
+      </ol>
+      <p style="margin:1mm 0 0;color:var(--ans)">Kutu → TLS → bulut ← jump server ← VPN ← MFA ← kişisel hesap (kayıtlı)</p>
+    </div>
+  </div>
+  <h3>Görev B — functional safety köprüsü</h3>
+  <p class="q"><span class="n">1</span>Saldırgan tüm önlemlere rağmen içeri girerse: emniyet fonksiyonu etkilenir mi? Neden?</p>
+  <p class="a">Hayır — hedef tasarımda etkilenmez. Kutu panonun kuru kontaklarını yalnızca okur; kutudan panoya hiçbir çıkış kablolanmamıştır. Saldırgan en fazla yanlış bildirim üretebilir ya da izlemeyi kesebilir; basınç anahtarı → pano → pompa zinciri ağdan habersiz çalışmaya devam eder. Bu yüzden "izleme gelmiyor" durumu da ayrıca alarm olarak ele alınır.</p>
+  <p class="q"><span class="n">2</span>Emniyet fonksiyonunun kontrol sisteminden (izleme/uzak erişim yolundan) bağımsız çalışması için GEREKSİNİMİ yazın (çözümü değil).</p>
+  <p class="a">"Yangın pompalarını başlatma, durdurma, otomatik/el modunu değiştirme ve basınç/zamanlayıcı ayarlarını değiştirme yetkisi yalnızca yerinde, kilitli kumanda panosunda ve basınç anahtarlarında bulunmalıdır. Hiçbir ağ bağlantısı (izleme kutusu, BMS, bulut, servis erişimi) bu fonksiyonları etkileyememeli; izleme sisteminin arızalanması, kapatılması veya ele geçirilmesi pompaların otomatik çalışmasını ve minimum çalışma sürelerini değiştirmemelidir."</p>
+  <p class="note">Tarafsızlık notu: Bu föy çözüm tasarlatmaz; gereksinimi tanımlatır. Tasarım kararı firmanındır.</p>
+  <p class="ep">Bu föyün çıktısı <b>Secure Architecture</b> → Evidence Pack <b>EP 02 + EP 06</b> başlığına oturur.</p>
+  <div class="footer">SAFETY 4.0 BOOTCAMP · Standart Pompa Yangın Pompa Seti Sürümü · Bu bir eğitim çıktısıdır, resmî denetim değildir.</div>
+</section>
+
+<!-- LAB 5 -->
+<section class="page">
+  <div class="labline">Laboratuvar 5 · Standart Pompa · Yangın Pompa Seti</div>
+  <div class="titlerow"><h2>SBOM / CVE / Patch</h2><div class="output">Çıktı: Vulnerability Decision</div></div>
+  <div class="meta"><div>Ad Soyad<span>Nisa Güven</span></div><div>Grup<span></span></div><div>Tarih<span>02.11.2026</span></div></div>
+  <div class="concept"><b>Kavram:</b> SBOM = yazılım malzeme listesi · CVE = açığın kayıt no'su · CVSS = ciddiyet (0–10). Bir CVE sizi etkiler mi? Üç şart: bileşen var, sürüm etkileniyor, açık ulaşılabilir.</div>
+  <h3>Verilen zafiyet kaydı</h3>
+  <table class="vuln">
+    <tr><td>Bileşen</td><td>Component X — S Plus Connect kutusunun ağ / firmware kütüphanesi</td></tr>
+    <tr><td>Sürüm</td><td>2.4</td></tr>
+    <tr><td>CVE</td><td>CVE-XXXX-XXXX</td></tr>
+    <tr><td>Önem</td><td>Critical (CVSS 9.8)</td></tr>
+    <tr><td>Yama</td><td>Mevcut</td></tr>
+  </table>
+  <h3>Görev — karar akışı</h3>
+  <p class="q"><span class="n">1</span>Bu CVE sizi gerçekten etkiliyor mu? (üç şartı kontrol edin)</p>
+  <p class="a"><b>Var mı:</b> Kutunun SBOM'unda Component X listeleniyor mu? <b>Sürüm:</b> Sahadaki kutuların firmware sürümleri buluttan çekilir; 2.4 olanlar etkilenen listesine girer. <b>Ulaşılabilir mi:</b> Kutu sadece dışarı bağlanıyor ve gelen portu kapalıysa uzaktan ulaşılabilirlik düşer; ama açığın giden bağlantı/TLS katmanında olup olmadığı kontrol edilir. Üçü de "evet" ise etkileniyoruz. SBOM yoksa bunu bilemeyiz — önce SBOM.</p>
+  <p class="q"><span class="n">2</span>Üretimi (pompayı) hemen durdurur musunuz? Neden / neden değil?</p>
+  <p class="a">Hayır, asla. Yangın pompasını durdurmak güvenli durum değil, güvensiz durumdur. Açık izleme kutusunda; emniyet yolu kutudan bağımsız olduğu için pompa çalışmaya devam eder. Gerekirse sadece kutunun bağlantısı kesilir (izleme geçici durur, servis ziyareti sıklaşır).</p>
+  <p class="q"><span class="n">3</span>Yamayı doğrudan mı uygularsınız, önce test mi? Nerede test?</p>
+  <p class="a">Önce test. Sıra: fabrikadaki test düzeneği (gerçek pano + kutu) → 3–5 pilot saha → kademeli filo dağıtımı. Kutu yalnızca imzalı güncelleme kabul eder; her adımda kutunun yeniden bağlandığı ve alarm sinyallerini doğru okuduğu kontrol edilir.</p>
+  <p class="q"><span class="n">4</span>Bu yama bir safety validation etkiliyor mu? Nasıl anlarsınız?</p>
+  <p class="a">Değişiklik analiziyle: yama yalnızca Z2'deki kutuya dokunuyor ve kutunun panoya yazma yolu yoksa NFPA 20 kabul testi ve emniyet doğrulaması etkilenmez — bu, zone/conduit diyagramı ve kablolama şemasıyla kanıtlanır. Yama pano veya dizel kontrol ünitesi yazılımına dokunsaydı emniyet doğrulaması ve saha kabul testi tekrarlanırdı.</p>
+  <p class="q"><span class="n">5</span>Yama mümkün değilse compensating control (telafi edici önlem) ne olur?</p>
+  <p class="a">Kutunun bağlantısı sadece S Plus bulut adresine izinli hale getirilir (APN / güvenlik duvarı kuralı), gelen trafik tamamen kapatılır, anormal trafik izlenir; olmazsa kutunun bağlantısı kesilip S Plus ziyaretleri geçici olarak sıklaştırılır ve bina sahibine yazılı bilgi verilir. Karar ve gerekçe açık kaydına işlenir.</p>
+  <p class="ep">Bu föyün çıktısı <b>Vulnerability Decision</b> → Evidence Pack <b>EP 09 · 10 · 11</b> başlığına oturur.</p>
+  <div class="footer">SAFETY 4.0 BOOTCAMP · Standart Pompa Yangın Pompa Seti Sürümü · Bu bir eğitim çıktısıdır, resmî denetim değildir.</div>
+</section>
+
+<!-- LAB 6 -->
+<section class="page">
+  <div class="labline">Laboratuvar 6 · Standart Pompa · Yangın Pompa Seti</div>
+  <div class="titlerow"><h2>CRA Incident Simulation</h2><div class="output">Çıktı: Incident Workflow</div></div>
+  <div class="meta"><div>Ad Soyad<span>Nisa Güven</span></div><div>Grup<span></span></div><div>Tarih<span>02.11.2026</span></div></div>
+  <div class="context"><b>Senaryo:</b> Saat 10:15. Bir bayi teknisyeninin S Plus servis hesabına gece 03:00'te tanınmayan bir konumdan girilmiş. Bir hastanenin yangın pompa odasındaki izleme ayarları ve bildirim alıcıları değişmiş olabilir; pano ayarlarının etkilenip etkilenmediği henüz doğrulanmadı. Pompalar çalışır durumda. Ürün güvenliği nöbetçisi sizsiniz.</div>
+  <div class="concept"><b>Kavram:</b> Bir olayda en değerli iki şey zaman ve kanıttır. CRA'nın 24s / 72s / 14 gün yükümlülükleri, iyi bir müdahale akışının doğal kilometre taşlarıdır — ezber değil.</div>
+  <h3>Görev — zaman çizgisini doldurun</h3>
+  <p class="q"><span class="n">1</span>10:15 — ilk 15 dk: Kimi ararsınız? İlk üç eyleminiz?</p>
+  <p class="a">Ararım: hastanenin teknik müdürü / bina sorumlusu, en yakın Standart Pompa servis noktası, ürün güvenliği sorumlusu (A). Eylemler: (1) Bina sorumlusundan pano seçicilerinin OTOMATİK'te ve basıncın normal olduğunu yerinde teyit etmesini iste; (2) ele geçen hesabı askıya al ve aktif oturumlarını sonlandır (silme!); (3) bulut, jump server ve VPN kayıtlarını dondur/kopyala. Pompayı ve kutuyu resetleme.</p>
+  <p class="q"><span class="n">2</span>İlk 2 saat: Emniyet güvende mi — nasıl doğrularsınız? Hangi kanıt korunur? Hangi hesap kapatılır?</p>
+  <p class="a">Emniyet: servis teknisyeni sahada basınç set değerlerini kayıtlı değerlerle karşılaştırır, haftalık test zamanlayıcısını kontrol eder ve elle elektriksel + elle mekanik yol verme testini yapar; pano kilidi ve kurşun mühür kontrol edilir. Kanıt: bulut olay kayıtları, kutu logları, jump server oturum kaydı, VPN/MFA logları, değişen ayarların önceki/sonraki hali, kutunun firmware sürümü. Kapatılanlar: ele geçen kişisel hesap, aynı bayinin diğer hesaplarının parolaları sıfırlanır, şüpheli API anahtarları iptal edilir; aynı hesabın erişebildiği diğer kutular taranır.</p>
+  <p class="q"><span class="n">3</span>24 saat — CRA erken uyarı: Hangi bilgi hazır olmalı?</p>
+  <p class="a">Etkilenen ürün ve sürüm (S Plus Connect + firmware), aktif istismar şüphesi olup olmadığı, olayın kötü niyetli olduğuna dair ilk değerlendirme, ürünün kurulu olduğu AB üyesi ülkeler ve etkilenen kutu sayısı tahmini, alınan ilk önlemler.</p>
+  <p class="q"><span class="n">4</span>72 saat — CRA bildirim: Kök neden, etki, önlem — kim ne yapıyor?</p>
+  <p class="a">Kök neden (ör. oltalama ile çalınan kimlik + MFA atlatma / açık), etki (kaç kutu, hangi ayarlar, emniyet yolunun etkilenmediği kanıtı), düzeltici önlem (MFA politikası, oturum süresi, alarm kuralı). RACI: ürün güvenliği sorumlusu <b>A</b>; OT/ürün ekibi ve servis <b>R</b>; IT ve hukuk <b>C</b>; etkilenen bina sahipleri ve bayiler <b>I</b>.</p>
+  <p class="q"><span class="n">5</span>14 gün — son rapor: Hangi loglar/kayıtlar korunmuş olmalı?</p>
+  <p class="a">Jump server tam oturum kayıtları, VPN/MFA giriş logları, bulut denetim logları, kutu olay logları ve firmware sürümleri, saha kontrol tutanağı ve test sonuçları, değişiklik kayıtları (EP 14), yama kayıtları (EP 11), SBOM sürümü (EP 09), müşteri ve otorite yazışmaları.</p>
+  <p class="rule">En sık hata: "Resetleyip devam edelim" — o düğme, kanıtı sonsuza dek siler. Önce emniyet, hemen sonra kanıt.</p>
+  <p class="ep">Bu föyün çıktısı <b>Incident Workflow</b> → Evidence Pack <b>EP 13 Incident Response</b> başlığına oturur.</p>
+  <div class="footer">SAFETY 4.0 BOOTCAMP · Standart Pompa Yangın Pompa Seti Sürümü · Bu bir eğitim çıktısıdır, resmî denetim değildir.</div>
+</section>
+
+<!-- LAB 7 -->
+<section class="page">
+  <div class="labline">Laboratuvar 7 · Standart Pompa · Yangın Pompa Seti</div>
+  <div class="titlerow"><h2>AI Safety Challenge</h2><div class="output">Çıktı: AI Fail-Safe Decision</div></div>
+  <div class="meta"><div>Ad Soyad<span>Nisa Güven</span></div><div>Grup<span></span></div><div>Tarih<span>02.11.2026</span></div></div>
+  <div class="concept"><b>Kavram — Prediction ≠ Safety:</b> Yapay zekâ bir karar üretir; güvenliği garanti eden mimari YZ'nin dışında tanımlanmalıdır. Araçlar: fail-safe · human override · monitoring · confidence threshold · fallback.</div>
+  <div class="context"><b>Senaryo:</b> S Plus Connect platformuna YZ'li arıza tahmini eklenmesi planlanıyor — proje aşaması değerlendirmesi yapıyorsunuz. Pano sinyalleri + akü/şarj + start denemeleri + çalışma süreleri → <b>YZ Modeli</b> → "Sağlıklı / Bakım gerekli" → servis iş emri önceliği. Model pompayı asla kontrol etmez.</div>
+  <h3>Görev — üç başarısızlıkta güvenli davranış</h3>
+  <p class="q"><span class="n">1</span>Model yanlış sınıflandırdı: Arızalı pompaya "sağlıklı" dedi. Sistem ne yapmalı? İkinci kontrol / insan onayı var mı?</p>
+  <p class="a">Modelin kararı hiçbir zaman gerçek alarmı bastıramaz: panodan gelen alarm, start hatası, akü arızası sinyalleri modelden bağımsız olarak doğrudan servise ve bina sorumlusuna gider. Takvimli S Plus ziyaretleri ve haftalık test kaldırılmaz; model yalnızca iş emirlerini öne çeker, iptal etmez. İkinci kontrol = fiziksel test.</p>
+  <p class="q"><span class="n">2</span>Girdi manipüle edildi: Sensör / kutu verisi bozuk ya da sahte. Nasıl fark edilir? Şüpheli girdide ne yapılır?</p>
+  <p class="a">Fark etme: veri imzası ve sıra numarası, fiziksel olarak imkânsız değerler (ör. test başladı ama pompa çalışmadı), haftalık testin beklenen saatte gelmemesi, uzun süre hiç değişmeyen "mükemmel" veri. Şüpheli girdide model o kutu için devre dışı kalır, "veri güvenilmez" alarmı servise gider ve o saha en riskli kabul edilip ziyaret planlanır.</p>
+  <p class="q"><span class="n">3</span>Confidence düştü: Model "emin değilim" diyor. Eşik ne olmalı? Altında: dur / insana sor / fallback?</p>
+  <p class="a">Pilot verisiyle belirlenen bir eşik (ör. %80); altında tahmin "sağlıklı" olarak gösterilmez. Pompa durdurulmaz (durmak güvensiz durum); karar servis teknisyenine sorulur ve kutu için takvimli bakım planına dönülür.</p>
+  <h3>Karar tablosu — AI Fail-Safe Decision</h3>
+  <table>
+    <tr><th style="width:30%">Başarısızlık</th><th>Tanımladığınız güvenli davranış (hangi kavramla?)</th></tr>
+    <tr><td>Model yanlış sınıflandırdı</td><td class="ans"><b>Monitoring + fallback:</b> gerçek pano alarmları modelden bağımsız iletilir; takvimli bakım ve haftalık test sürer. Model iş emrini iptal edemez.</td></tr>
+    <tr><td>Girdi manipüle edildi</td><td class="ans"><b>Fail-safe + monitoring:</b> veri bütünlüğü kontrolü; şüpheli veride model devre dışı, "veri güvenilmez" alarmı, saha en riskli kabul edilir.</td></tr>
+    <tr><td>Confidence düştü</td><td class="ans"><b>Confidence threshold + human override + fallback:</b> eşik altında tahmin gösterilmez, teknisyene sorulur, takvimli bakıma dönülür; pompa asla durdurulmaz.</td></tr>
+  </table>
+  <p class="ep">Bu föyün çıktısı <b>AI Fail-Safe Decision</b> → Evidence Pack <b>EP 03 + EP 15</b> başlığına oturur.</p>
+  <div class="footer">SAFETY 4.0 BOOTCAMP · Standart Pompa Yangın Pompa Seti Sürümü · Bu bir eğitim çıktısıdır, resmî denetim değildir.</div>
+</section>
+
+</body>
+</html>
