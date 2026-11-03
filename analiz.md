@@ -4,14 +4,20 @@
 
 ## Yönetici özeti
 
-Standart Pompa'nın NFPA 20'ye uygun yangın pompa seti, panosunda zaten ürettiği veriyi dışarı çıkarmıyor. En büyük fırsat, bu veriyi **sadece okuyan**, siber güvenli bir uzaktan izleme paketiyle elle yürüyen S Plus bakım hizmetini aboneliğe çevirmek.
+Standart Pompa'nın yangın pompa seti, panosunda zaten ürettiği veriyi kullanmıyor. Bu veriyi **sadece okuyan** güvenli bir izleme kutusu, tek seferlik pompa satışını **yıllara yayılan abonelik gelirine** çevirir ve firmayı yerli rakiplerden ayıran tek fark olabilir.
 
-- **Güçlü yön:** NFPA 20, UL ve FM uyumlu ürünler; yönetmeliğe uygun ayrı ve kilitli panolar; 114 teknik servis. Firma İSO İkinci 500 listesinde 391. sırada.
-- **Zayıf yön:** Pano sinyalleri sadece ışık ve kuru kontak olarak veriliyor. Haftalık test kayıt altına alınmıyor. Bakım paketi ziyaret ve telefonla yürüyor.
-- **Fırsat:** Test kayıtlarını otomatik tutan, arızayı anında bildiren uzaktan izleme. Benzer ürünler dünyada abonelikle satılıyor (Armstrong, Peerless); Türkiye'de yerli bir pompa üreticisinde örneği bulunamadı.
-- **Tehdit:** CRA ve AB Makine Tüzüğü bağlantılı ürünlere siber güvenlik kanıtı şartı getiriyor. Yanlış tasarlanmış bir bağlantı, yangın anında pompayı devre dışı bırakmak için kullanılabilir.
+**Para nerede? İlk üç fırsat:**
 
-**Öneri:** İzleme sistemi pompayı asla çalıştırıp durduramamalı; emniyet fonksiyonu panoda, bağımsız kalmalı. Bu ilkeyle tasarlanan bir "CRA'ya hazır bağlantılı yangın pompası" hem yeni gelir hem de AB ihracatında rekabet avantajı sağlar.
+1. **S Plus Connect aboneliği** — mevcut S Plus müşterilerine izleme ve otomatik test raporu. En hızlı gelir; müşteri ilişkisi hazır.
+2. **Sahadaki eski setlere sonradan takma kiti** — her kurulu set hem kit satışı hem abone adayı. Yeni pompa satmadan büyüme.
+3. **Aynı platformun hidroforlara ve diğer makinelere yayılması** — hidrofor neredeyse her binada var; aynı kutu ve bulut, çok daha büyük bir tabanı aboneliğe bağlar.
+
+- **Neden Standart Pompa kazanır:** NFPA 20, UL ve FM belgeleri + 114 servis noktası + hazır bakım paketi. Yabancı rakiplerin (Armstrong, Peerless) izleme ürünü var ama Türkiye'de servis ağı yok; yerli rakiplerin servis ağı olabilir ama izleme ürünü bulunamadı.
+- **Neden şimdi:** CRA bildirim yükümlülüğü başladı (11 Eylül 2026), AB Makine Tüzüğü 20 Ocak 2027'de geliyor. Erken hazırlanan firma uyumu satış argümanına çevirir; geç kalan AB'de müşteri kaybeder.
+- **En büyük risk:** Bağlantı yanlış tasarlanırsa hayat kurtaran pompa saldırıya açılır. Çözüm aynı zamanda pazarlama mesajıdır: "izler, asla kontrol etmez".
+- **İlk adım:** 5 sahalık pilot ve 90 günlük plan; büyük yatırım kararı pilot sonucuna bağlı.
+
+**Öneri:** Önce mevcut S Plus müşterileriyle abonelik pilotu; işe yararsa kiti sahadaki eski setlere ve hidroforlara yay. Emniyet fonksiyonu her zaman panoda, ağdan bağımsız kalır. Ayrıntı: [ekler/10-is-potansiyeli.md](ekler/10-is-potansiyeli.md).
 
 Analiz firmanın web sitesine, [genel ürün kataloğuna](https://www.standartpompa.com/tr/images/pdf/sp_urun_katalog.pdf) (Rev.12, Ekim 2023) ve Safety 4.0 Bootcamp föylerinin yöntemine dayanır. Bir eğitim çıktısıdır; resmî denetim ya da uygunluk değerlendirmesi değildir.
 

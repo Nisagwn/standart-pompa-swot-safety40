@@ -22,6 +22,7 @@ Safety 4.0 Bootcamp (INSPECCO × Kriptarium) kapsamında, SAMİB üyesi Standart
 | [ekler/07-pilot-plani.md](ekler/07-pilot-plani.md) | 5 sahalık pilot planı ve başarı ölçütleri |
 | [ekler/08-mimari.md](ekler/08-mimari.md) | S Plus Connect mimari şeması (Mermaid) ve güvenlik özellikleri |
 | [ekler/09-mevzuat-kontrol-listesi.md](ekler/09-mevzuat-kontrol-listesi.md) | Yönetmelik, CRA, AB Makine Tüzüğü, RED, KVKK kontrol listesi |
+| [ekler/10-is-potansiyeli.md](ekler/10-is-potansiyeli.md) | **Para nerede:** 8 gelir fırsatı sıralaması, gelir × kolaylık matrisi, farklılaşma, kişisel fırsatlar |
 
 Canlı doküman: https://claude.ai/artifact/RFDbeNs1YNvMKbyyP3U12U
 
