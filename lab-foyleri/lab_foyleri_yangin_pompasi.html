@@ -82,6 +82,7 @@
     <div><b>LAB 5 · SBOM / CVE / Patch</b> — <span>Çıktı: Vulnerability Decision</span></div>
     <div><b>LAB 6 · CRA Incident Simulation</b> — <span>Çıktı: Incident Workflow</span></div>
     <div><b>LAB 7 · AI Safety Challenge</b> — <span>Çıktı: AI Fail-Safe Decision</span></div>
+    <div><b>MACHINE STARTER PACK</b> — <span>Varlık Envanteri (EP 01) · Evidence Pack 15 başlık · RACI + 90 günlük plan</span></div>
   </div>
   <p class="note">Makine bilgileri Standart Pompa genel ürün kataloğundan (Rev.12, Ekim 2023) alınmıştır. Pano içinde PLC / elektronik kontrol kartı bulunup bulunmadığı ve S Plus Connect kutusu, firmadan doğrulanması gereken varsayımlardır.</p>
   <p class="disclaimer">Bu föyler bir eğitim çıktısıdır; resmî denetim, uygunluk değerlendirmesi veya belgelendirme değildir ve CE/mevzuat uygunluğu garantisi vermez. Doldurduğunuz föyler gün sonunda Machine Starter Pack'inizi oluşturur ve Safety 4.0 Workspace'te yaşamaya devam eder.</p>
@@ -298,6 +299,90 @@
     <tr><td>Confidence düştü</td><td class="ans"><b>Confidence threshold + human override + fallback:</b> eşik altında tahmin gösterilmez, teknisyene sorulur, takvimli bakıma dönülür; pompa asla durdurulmaz.</td></tr>
   </table>
   <p class="ep">Bu föyün çıktısı <b>AI Fail-Safe Decision</b> → Evidence Pack <b>EP 03 + EP 15</b> başlığına oturur.</p>
+  <div class="footer">SAFETY 4.0 BOOTCAMP · Standart Pompa Yangın Pompa Seti Sürümü · Bu bir eğitim çıktısıdır, resmî denetim değildir.</div>
+</section>
+
+<!-- MACHINE STARTER PACK 1: VARLIK ENVANTERI -->
+<section class="page">
+  <div class="labline">MACHINE STARTER PACK · Standart Pompa · Yangın Pompa Seti</div>
+  <div class="titlerow"><h2>Varlık Envanteri</h2><div class="output">Çıktı: EP 01 Asset Inventory</div></div>
+  <div class="meta"><div>Ad Soyad<span>Nisa Güven</span></div><div>Grup<span></span></div><div>Tarih<span>03.11.2026</span></div></div>
+  <div class="concept"><b>Kavram:</b> "Görmediğin kapıyı kilitleyemezsin." Korumanın ilk adımı sayımdır — ve sayım hafızayla değil, kategoriyle yapılır. Her kategoride üç kez "başka?" diye sorun.</div>
+  <div class="context"><b>Sonuç:</b> "Pompa, pano, motor" diye başlayan liste, sistematik sayım sonrası <b>27 varlık + 6 dış bağlantıya</b> çıktı; ayrıca 7 hesap ve 6 kritik veri akışı var. 9 varlık emniyet yolunun parçası (Z1).</div>
+  <table>
+    <tr><th style="width:20%">Kategori</th><th>Varlıklar</th></tr>
+    <tr><td><b>1 · Donanım</b> (16)</td><td class="ans"><b>Z1:</b> ana elektrikli pompa, dizel yedek pompa, jokey pompa, basınç anahtarları (≥2), elektrik pompa panosu, dizel panosu + kontrol ünitesi, jokey panosu, test zamanlayıcısı + selenoid, akü 1/2 + şarj · <b>izleme:</b> debimetre, vana izleme anahtarları · <b>Z2:</b> S Plus Connect kutusu, 4G modem/SIM · <b>Z3:</b> BMS, yangın alarm paneli · <b>Z5:</b> servis dizüstüsü, USB/servis kablosu</td></tr>
+    <tr><td><b>2 · Yazılım / firmware</b> (6)</td><td class="ans">Pano koruma rölesi/kontrolcü yazılımı, dizel kontrol ünitesi firmware, kutu firmware + işletim sistemi, bulut platformu, mobil uygulama, servis ayar yazılımı (varsa)</td></tr>
+    <tr><td><b>3 · Sertifika / anahtar</b> (5)</td><td class="ans">Kutu cihaz sertifikası, <b>güncelleme imza anahtarı</b> (en kritik), bulut TLS sertifikası, VPN/jump server anahtarları, bildirim servisi anahtarları</td></tr>
+    <tr><td><b>4 · Dış bağlantı</b> (6)</td><td class="ans">Kutu → bulut (4G, sadece dışarı) · pano → BMS (tek yönlü) · servis → jump server → VPN · bulut → mobil bildirim · güncelleme sunucusu → kutu (imzalı) · bulut → bayi paneli</td></tr>
+    <tr><td><b>5 · Hesaplar</b> (7)</td><td class="ans">Bina sahibi, bina teknik personeli, Standart Pompa teknisyeni, bayi teknisyeni, platform yöneticisi, kutu yerel servis hesabı (varsayılan parola olmamalı), pano anahtarı (fiziksel "hesap")</td></tr>
+    <tr><td><b>6 · Kritik veri akışı</b> (6)</td><td class="ans">Alarm/çalışma/otomatik mod · haftalık test sonucu · set değeri değişikliği (sabotaj belirtisi) · firmware güncellemesi · servis oturum kayıtları · müşteri/bina verisi (KVKK)</td></tr>
+  </table>
+  <p class="note">Pano içi elektronik ve firmware sürümleri firmadan doğrulanacaktır. Ayrıntılı tablo: ekler/01-varlik-envanteri.md</p>
+  <p class="rule">Bir saldırgan, sizin bildiğiniz kapıdan girmez — bilmediğiniz kapıdan girer.</p>
+  <div class="footer">SAFETY 4.0 BOOTCAMP · Standart Pompa Yangın Pompa Seti Sürümü · Bu bir eğitim çıktısıdır, resmî denetim değildir.</div>
+</section>
+
+<!-- MACHINE STARTER PACK 2: EVIDENCE PACK -->
+<section class="page">
+  <div class="labline">MACHINE STARTER PACK · Standart Pompa · Yangın Pompa Seti</div>
+  <div class="titlerow"><h2>Evidence Pack — 15 Başlık</h2><div class="output">Durum: Yok / Taslak / Var / Doğrulanmış</div></div>
+  <div class="concept"><b>"Yarın denetçi geldi — masaya hangi dosyaları koyacaksınız?"</b> Kanıt merdiveni: Beyan → Prosedür → Kayıt → Doğrulanmış kayıt. Hedef: her başlıkta bir basamak yukarı.</div>
+  <table>
+    <tr><th>EP</th><th>Başlık</th><th>Bugün (tahmin)</th><th>Föylerden sonra</th><th>Kaynak</th><th>Sıradaki adım</th></tr>
+    <tr><td>01</td><td>Asset Inventory</td><td>Yok</td><td class="ans">Taslak</td><td>Starter Pack s.1</td><td class="ans">Pano içi elektronik ve sürümler</td></tr>
+    <tr><td>02</td><td>Network Architecture</td><td>Yok</td><td class="ans">Taslak</td><td>Lab 4</td><td class="ans">Kablolama şeması</td></tr>
+    <tr><td>03</td><td>Safety Functions</td><td>Var</td><td class="ans">Taslak (güncel)</td><td>Lab 1, 7</td><td class="ans">Siber bağımlılıkları ekle</td></tr>
+    <tr><td>04</td><td>Cyber Risk Assessment</td><td>Yok</td><td class="ans">Taslak</td><td>Lab 3</td><td class="ans">Puanları kalibre et</td></tr>
+    <tr><td>05</td><td>Zone &amp; Conduit</td><td>Yok</td><td class="ans">Taslak</td><td>Lab 2</td><td class="ans">Pilotta doğrula</td></tr>
+    <tr><td>06</td><td>Remote Access Procedure</td><td>Yok</td><td class="ans">Taslak</td><td>Lab 2B, 4</td><td class="ans">Yazılı prosedür</td></tr>
+    <tr><td>07</td><td>User/Role Matrix</td><td>Yok</td><td class="ans">Taslak</td><td>Envanter</td><td class="ans">İzin tablosu</td></tr>
+    <tr><td>08</td><td>Software/Firmware Inv.</td><td>Yok</td><td class="ans">Yok</td><td>—</td><td class="ans">Sürümleri topla</td></tr>
+    <tr><td>09</td><td>SBOM</td><td>Yok</td><td class="ans">Yok (şablon)</td><td>Lab 5</td><td class="ans">Otomatik SBOM üretimi</td></tr>
+    <tr><td>10</td><td>Vulnerability Records</td><td>Yok</td><td class="ans">Taslak</td><td>Lab 5</td><td class="ans">Açık bildirim politikası</td></tr>
+    <tr><td>11</td><td>Patch/Update Records</td><td>Yok</td><td class="ans">Yok</td><td>Lab 5</td><td class="ans">İmzalı güncelleme</td></tr>
+    <tr><td>12</td><td>Backup &amp; Restore</td><td>Yok</td><td class="ans">Yok</td><td>—</td><td class="ans">Pano ayar yedeği</td></tr>
+    <tr><td>13</td><td>Incident Response</td><td>Yok</td><td class="ans">Taslak</td><td>Lab 6</td><td class="ans">Tatbikat</td></tr>
+    <tr><td>14</td><td>Change Management</td><td>Yok</td><td class="ans">Yok</td><td>—</td><td class="ans">Ayar değişikliği formu</td></tr>
+    <tr><td>15</td><td>Verification/Test</td><td>Var (NFPA 20)</td><td class="ans">Var</td><td>Katalog</td><td class="ans">Sızma testi ekle</td></tr>
+  </table>
+  <p class="a"><b>Özet:</b> Bugün 2 başlık "Var"; föylerle 9 başlık "Taslak"a çıktı; 5 başlık (08, 09, 11, 12, 14) ürün henüz olmadığı için "Yok".</p>
+  <div class="footer">SAFETY 4.0 BOOTCAMP · Standart Pompa Yangın Pompa Seti Sürümü · Bu bir eğitim çıktısıdır, resmî denetim değildir.</div>
+</section>
+
+<!-- MACHINE STARTER PACK 3: RACI + 90 GUN -->
+<section class="page">
+  <div class="labline">MACHINE STARTER PACK · Standart Pompa · Yangın Pompa Seti</div>
+  <div class="titlerow"><h2>Safety 4.0 RACI + 90 Günlük Plan</h2><div class="output">"Kim?" sorusu</div></div>
+  <div class="concept"><b>Kavram:</b> R = yapan · A = nihai sorumlu (tek) · C = görüşü alınan · I = bilgilendirilen. A'sı boş satır = sahipsiz iş → 90 günlük plana girer.</div>
+  <table>
+    <tr><th>Görev</th><th>İş</th><th>Tasarım</th><th>OT</th><th>IT</th><th>Safety</th><th>Servis</th><th>Yönetim</th></tr>
+    <tr><td>Asset inventory</td><td class="c">C</td><td class="c">R</td><td class="c">R</td><td class="c">C</td><td class="c">C</td><td class="c">C</td><td class="c" style="color:var(--red)">A</td></tr>
+    <tr><td>Remote access</td><td class="c">I</td><td class="c">C</td><td class="c">R</td><td class="c">R</td><td class="c">C</td><td class="c">C</td><td class="c" style="color:var(--red)">A</td></tr>
+    <tr><td>Patch / update</td><td class="c">I</td><td class="c">R</td><td class="c">C</td><td class="c">C</td><td class="c">C</td><td class="c">R</td><td class="c" style="color:var(--red)">A</td></tr>
+    <tr><td>Safety change (pano ayarı)</td><td class="c">I</td><td class="c">C</td><td class="c">C</td><td class="c">I</td><td class="c">R</td><td class="c">C</td><td class="c" style="color:var(--red)">A</td></tr>
+    <tr><td>Incident</td><td class="c">C</td><td class="c">C</td><td class="c">R</td><td class="c">R</td><td class="c">C</td><td class="c">R</td><td class="c" style="color:var(--red)">A</td></tr>
+    <tr><td>Risk assessment</td><td class="c">C</td><td class="c">R</td><td class="c">R</td><td class="c">C</td><td class="c">R</td><td class="c">C</td><td class="c" style="color:var(--red)">A</td></tr>
+    <tr><td>SBOM ve açık yönetimi</td><td class="c">I</td><td class="c">R</td><td class="c">C</td><td class="c">R</td><td class="c">I</td><td class="c">I</td><td class="c" style="color:var(--red)">A</td></tr>
+    <tr><td>Abonelik ve müşteri bildirimi</td><td class="c">R</td><td class="c">I</td><td class="c">I</td><td class="c">C</td><td class="c">I</td><td class="c">R</td><td class="c" style="color:var(--red)">A</td></tr>
+    <tr><td>CRA otorite bildirimi</td><td class="c">I</td><td class="c">C</td><td class="c">C</td><td class="c">C</td><td class="c">C</td><td class="c">I</td><td class="c" style="color:var(--red)">A</td></tr>
+  </table>
+  <h3>90 günlük plan</h3>
+  <table>
+    <tr><th style="width:12%">Hafta</th><th>İş</th><th style="width:14%">EP</th></tr>
+    <tr><td>1–2</td><td class="ans">Ürün güvenliği sorumlusunu ata, RACI'yi imzalat</td><td>07</td></tr>
+    <tr><td>1–3</td><td class="ans">Pano tiplerinin iç yapısını ve firmware sürümlerini topla</td><td>01, 08</td></tr>
+    <tr><td>2–4</td><td class="ans">"Sadece okur" tasarım gereksinimi ve kablolama şeması</td><td>02, 05</td></tr>
+    <tr><td>3–6</td><td class="ans">Uzak erişim prosedürü (jump server, MFA, kişisel hesap, kayıt)</td><td>06</td></tr>
+    <tr><td>4–8</td><td class="ans">Kutu prototipi + otomatik SBOM</td><td>09</td></tr>
+    <tr><td>5–8</td><td class="ans">Pano ayar değişikliği iş emri ve kayıt formu, ayar yedeği</td><td>12, 14</td></tr>
+    <tr><td>6–9</td><td class="ans">Açık bildirim politikasını yayımla</td><td>10</td></tr>
+    <tr><td>8–10</td><td class="ans">Olay müdahale tatbikatı (Lab 6 senaryosu)</td><td>13</td></tr>
+    <tr><td>9–12</td><td class="ans">3–5 pilot sahada kurulum ve doğrulama</td><td>02, 05, 15</td></tr>
+    <tr><td>12–13</td><td class="ans">Evidence Pack durumunu yeniden değerlendir</td><td>Tümü</td></tr>
+  </table>
+  <p class="a"><b>90 gün hedefi:</b> EP 01, 02, 05, 06, 07, 13 "Var"; EP 09, 10, 14 en az "Taslak".</p>
+  <p class="note">Referanslar: ISO 12100/13849, IEC 62061/61508, IEC 62443, ISO/IEC 42001, Makine Tüzüğü (AB) 2023/1230, CRA.</p>
   <div class="footer">SAFETY 4.0 BOOTCAMP · Standart Pompa Yangın Pompa Seti Sürümü · Bu bir eğitim çıktısıdır, resmî denetim değildir.</div>
 </section>
 
